@@ -5,8 +5,9 @@ import pandas as pd
 import numpy as np 
 from datetime import datetime
 import joblib 
+import os
 
-pipe_lr = joblib.load(open("./Models/text_emotion_classifier.pkl","rb"))
+pipe_lr = joblib.load(open(os.getcwd() + "/Models/text_emotion_classifier.pkl", "rb"))
 
 from track import create_page_table, add_page_details, view_all_page_details, add_prediction_details, view_all_prediction_details, create_emotionclf_table
 
